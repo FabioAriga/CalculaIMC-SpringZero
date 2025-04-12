@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="<http://www.thymeleaf.org>">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculo IMC - Ideal</title>
+    </head>
+    <body>
+        <h1>Calculo IMC</h1>
+        <h2 id="nome"></h2>
+        <h2 id="peso"></h2>
+        <h2 id="altura"></h2>
+        <h2 id="imc"></h2>
+        <h2>Resultado: Peso ideal</h2>
+        <h3>Você está incrível exatamente do jeito que é! O mais importante é se sentir bem consigo mesmo e cuidar da sua saúde. Continue brilhando e se amando!</h3>
+        <a href="http://localhost:5000/"><button>Voltar</button></a>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById("nome").textContent = "Nome: " + params.get("nome");
+            document.getElementById("peso").textContent = "Peso: " + params.get("peso") + " Kg";
+            document.getElementById("altura").textContent = "Altura: " + params.get("altura") + " m";
+            document.getElementById("imc").textContent = "IMC: " + params.get("imc");
+        </script>
+    </body>
+</html>

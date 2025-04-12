@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="<http://www.thymeleaf.org>">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculo IMC - Ob2</title>
+    </head>
+    <body>
+        <h1>Calculo IMC</h1>
+        <h2 id="nome"></h2>
+        <h2 id="peso"></h2>
+        <h2 id="altura"></h2>
+        <h2 id="imc"></h2>
+        <h2>Resultado: Obesidade de grau 2</h2>
+        <h3>Eu sei que a jornada pode ser desafiadora, mas cada passo em direção ao seu bem-estar é uma vitória. O mais importante é cuidar de si com carinho e paciência. Você é mais forte do que imagina e merece sentir-se bem consigo mesmo. Lembre-se de que sua saúde e felicidade são prioridade, e cada dia é uma nova oportunidade para avançar, com amor e respeito ao seu corpo.</h3>
+        <a href="http://localhost:5000/"><button>Voltar</button></a>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            document.getElementById("nome").textContent = "Nome: " + params.get("nome");
+            document.getElementById("peso").textContent = "Peso: " + params.get("peso") + " Kg";
+            document.getElementById("altura").textContent = "Altura: " + params.get("altura") + " m";
+            document.getElementById("imc").textContent = "IMC: " + params.get("imc");
+        </script>
+    </body>
+</html>
