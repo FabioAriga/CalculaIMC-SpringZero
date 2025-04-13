@@ -9,20 +9,21 @@
     <body>
         <h1>Calculo IMC</h1>
         <form id="formulario">
-            <label for="nome">Nome:</label><br>
+            <label for="nome">Nome (sem acento):</label><br>
             <input type="text" id="nome" name="nome" required><br><br>
-            <label for="peso">Peso(com "."):</label><br>
+            <label for="peso">Peso (com "."):</label><br>
             <input type="number" id="peso" name="peso" required step="0.01"><br><br>
-            <label for="altura">Altura(com "."):</label><br>
+            <label for="altura">Altura (com "."):</label><br>
             <input type="number" id="altura" name="altura" required step="0.01"><br><br>
             <input type="submit" value="Consultar">
         </form>
         <h4>Grupo:</h4>
         <h5>Fábio Jun Ariga - 137192412020</h5>
+        <h5>João Carlos Souza Pereira – 1371392412013</h5>
+        <h5>Vinicius de Almeida Romagnolo – 1371392412015</h5>
         <p>O projeto realiza o cálculo do IMC de qualquer pessoa, através do peso e altura que você for inserir no formulafio acima, já o nome é para que na página do resultado apareça o seu nome.</p>
         <script>
-            document.getElementById("formulario").addEventListener(
-                "submit", function(e){
+            document.getElementById("formulario").addEventListener("submit", function(e){
                     e.preventDefault();
                     const nome = document.getElementById("nome").value;
                     const peso = document.getElementById("peso").value;
